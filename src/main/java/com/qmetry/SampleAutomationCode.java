@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class SampleAutomationCode {
 
 	public static ChromeDriver browser;
-	public static String chromeDriverPath = "/Users/dhara/Downloads/chromedriver";
+	public static String chromeDriverPath = "../chromedriver";
 
 	/**
 	 * Navigate to qmetry web site.
@@ -33,8 +33,10 @@ public class SampleAutomationCode {
 	 *             if interrupted during sleep.
 	 */
 	public static void queryText(String text) throws InterruptedException {
-
-		WebElement searchBox = browser.findElement(By.id("s"));
+		WebElement searchBoximage = browser.findElement(By.className("mgn_lance"));
+		searchBoximage.click();
+		TimeUnit.SECONDS.sleep(2);
+		WebElement searchBox = browser.findElement(By.id("search"));
 		searchBox.sendKeys(text); // Enter text into the box.
 		searchBox.submit(); // Submit the query -- hitting the return key.
 		TimeUnit.SECONDS.sleep(2);

@@ -24,7 +24,7 @@ public class SampleAutomationCodeTest {
         
         try {
             String pageTitle = SampleAutomationCode.navigateToGoogle();
-            assertEquals(pageTitle, "QMetry Test Management Tool for Agile Testing");
+            assertEquals(pageTitle, "QMetry | Best Test Management and Automated Testing Tools");
         } catch (InterruptedException e) {
             Reporter.log(e.getStackTrace().toString());
         }
@@ -38,7 +38,7 @@ public class SampleAutomationCodeTest {
     public void queryForProduct() {
         
         try {
-            SampleAutomationCode.queryText("QMetry Automation Framework");
+            SampleAutomationCode.queryText("QMetry Automation Studio");
         } catch (InterruptedException e) {
             Reporter.log(e.getStackTrace().toString());
         } finally {
