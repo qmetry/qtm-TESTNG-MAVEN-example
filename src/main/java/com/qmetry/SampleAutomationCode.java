@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class SampleAutomationCode {
 
 	public static ChromeDriver browser;
-	public static String chromeDriverPath = "../chromedriver";
+	public static String chromeDriverPath = "src/main/java/com/qmetry/chromedriver";
 
 	/**
 	 * Navigate to qmetry web site.
